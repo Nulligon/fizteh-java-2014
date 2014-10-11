@@ -55,14 +55,13 @@ public class Filemap {
             } catch (FileNotFoundException e) {
                 filePath.toFile().createNewFile();
             }
-        } 
-        catch (Exception e) {
+        } catch (Exception e) {
             System.err.println("Data base file could not be found or created");
             throw new ExitException();
         }
     }
 
-    private static void getData( //2nd variant
+    private static void getData(//2nd variant
             RandomAccessFile dbFile, TreeMap<String, String> fileMap)
             throws IOException {
         
@@ -106,7 +105,7 @@ public class Filemap {
         bytes.close();
     }
 
-    private static void putData( //2nd variant
+    private static void putData(//2nd variant
             RandomAccessFile dbFile, TreeMap<String, String> fileMap)
             throws IOException {
         
